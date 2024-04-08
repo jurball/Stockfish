@@ -16,6 +16,9 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+
+//test
+//and master
 #include "search.h"
 
 #include <algorithm>
@@ -1902,9 +1905,8 @@ std::string SearchManager::pv(const Search::Worker&     worker,
         if (ss.rdbuf()->in_avail())  // Not at first line
             ss << "\n";
 
-        ss << "info"
-           << " depth " << d << " seldepth " << rootMoves[i].selDepth << " multipv " << i + 1
-           << " score " << UCI::to_score(v, pos);
+        ss << "info" << " depth " << d << " seldepth " << rootMoves[i].selDepth << " multipv "
+           << i + 1 << " score " << UCI::to_score(v, pos);
 
         if (worker.options["UCI_ShowWDL"])
             ss << UCI::wdl(v, pos);
